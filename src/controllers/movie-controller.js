@@ -36,6 +36,8 @@ router.get("/search", async (req, res) => {
 router.get("/:movieId/details", async (req, res) => {
 	const movieId = req.params.movieId;
 	const movie = await movieServices.getOne(movieId).lean();
+	console.log(movie.casts);
+
 
 	// * Prepare view data
 	movie.ratingView = getRatingStars(Number(movie.rating));
@@ -48,12 +50,12 @@ router.get("/:movieId/attach", async (req, res) => {
 
 	res.render("movies/attach", { movie, casts });
 });
-router.post("/:movieId/attach", (req, res) => {
-	const movieId = req.params.movieId;
-	const cast = req.body.cast;
 
-	console.log(movieId);
-	console.log(cast);
+router.post("/:movieId/attach", async (req, res) => {
+	const movieId = req.params.movieId;
+	const castId = req.body.cast;
+
+	await movieServices.attach(movieId, castId);
 
 	res.redirect(`/movies/${movieId}/details`);
 });

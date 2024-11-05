@@ -20,12 +20,15 @@
 ## Developing Steps Part 2
 1. Refactor config files. Express, mongoose and handlebars
 2. Add movie model
-3. Convert file based storage to db storage\
+3. Convert file based storage to db storage
 4. Add Cast Model
 5. Add create cast page
 6. Add attach cast page
+7. Show cast in details page
 
-* Add Model validation
-* Fix filtering for movies
-* Add character name
-* Filter casts based on add ones
+## Bonus:
+ - [ ] Add Model validation
+ - [ ] Fix filtering for movies
+ - [ ] Add character name
+ - [ ] Filter casts based on add ones
+ - [ ] Atlas
