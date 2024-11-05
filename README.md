@@ -9,3 +9,6 @@
 6. Render home page
 7. Setup Home Controller
 8. Setup routes
+9. Add About page
+10. Add 404 page
+11. Extract partial template
