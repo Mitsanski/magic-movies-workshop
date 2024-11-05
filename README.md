@@ -16,3 +16,6 @@
 13. Add Create Page 
 14. Add Detials Page
 15. Add Search Page
+
+## Developing Steps Part 2
+1. Refactor 

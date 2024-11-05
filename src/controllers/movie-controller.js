@@ -17,14 +17,17 @@ router.post("/create", async (req, res) => {
 
 	res.redirect("/");
 });
+
+// * Searches a movie based on a query 
 router.get("/search", async (req, res) => {
 	const filter = req.query;
 	const movies = await movieServices.getAll(filter)
+	// * Renders the home page again but in case its a search request it give it isSearch and if true shows the search form
 	res.render("home", { isSearch: true, movies, filter });
 });
 
 
-
+// * Gets the id of the movie and shows the details of the moive 
 router.get("/:movieId/details", async (req, res) => {
 	const movie = await movieServices.getOne(req.params.movieId);
 
@@ -33,6 +36,7 @@ router.get("/:movieId/details", async (req, res) => {
 	res.render("movies/details", { movie });
 });
 
+// * Function that the rating of the movie and converts it into stars string
 function getRatingStars(stars) {
 	if (!Number.isInteger(stars)) {
 		return "n\\a";

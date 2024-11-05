@@ -1,6 +1,7 @@
 import uniqid from "uniqid";
 import movieData from "../data/movieData.js";
 
+// * Getting all movies but if there is a filter it filters them down. That is in case of /search
 const getAll = async (filter = {}) => {
 	let movies = await movieData.getAll();
 
@@ -22,6 +23,7 @@ const getAll = async (filter = {}) => {
 	return movies;
 };
 
+// * Creating a movie 
 const create = (movie) => {
 	movie.id = uniqid();
 	movie.rating = Number(movie.rating);
@@ -29,6 +31,8 @@ const create = (movie) => {
 	return movieData.create(movie);
 };
 
+
+// * Getting just one movie based on movie id
 const getOne = async (id) => {
 	const movies = await getAll();
 
