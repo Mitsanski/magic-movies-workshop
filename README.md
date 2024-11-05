@@ -23,7 +23,9 @@
 3. Convert file based storage to db storage\
 4. Add Cast Model
 5. Add create cast page
+6. Add attach cast page
 
 * Add Model validation
 * Fix filtering for movies
 * Add character name
+* Filter casts based on add ones

@@ -1,5 +1,6 @@
 import { Router } from "express";
 import movieServices from "../services/movieServices.js";
+import castServices from "../services/castServices.js";
 
 const router = Router();
 
@@ -26,7 +27,7 @@ function toArray(documents) {
 router.get("/search", async (req, res) => {
 	const filter = req.query;
 	const movies = await movieServices.getAll(filter);
-	
+
 	// * Renders the home page again but in case its a search request it give it isSearch and if true shows the search form
 	res.render("home", { isSearch: true, movies: toArray(movies), filter });
 });
@@ -34,11 +35,18 @@ router.get("/search", async (req, res) => {
 // * Gets the id of the movie and shows the details of the moive
 router.get("/:movieId/details", async (req, res) => {
 	const movieId = req.params.movieId;
-	const movie = await movieServices.getOne(movieId);
+	const movie = await movieServices.getOne(movieId).lean();
 
 	// * Prepare view data
 	movie.ratingView = getRatingStars(Number(movie.rating));
 	res.render("movies/details", { movie });
+});
+
+router.get("/:movieId/attach", async (req, res) => {
+	const movie = await movieServices.getOne(req.params.movieId).lean();
+	const casts = await castServices.getAll().lean();
+
+	res.render("movies/attach", { movie, casts });
 });
 
 // * Function that the rating of the movie and converts it into stars string
