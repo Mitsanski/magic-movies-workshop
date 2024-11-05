@@ -17,6 +17,13 @@ router.post("/create", async (req, res) => {
 
 	res.redirect("/");
 });
+router.get("/search", async (req, res) => {
+	const filter = req.query;
+	const movies = await movieServices.getAll(filter)
+	res.render("home", { isSearch: true, movies, filter });
+});
+
+
 
 router.get("/:movieId/details", async (req, res) => {
 	const movie = await movieServices.getOne(req.params.movieId);
