@@ -1,0 +1,23 @@
+{
+  "name": "magic-movies-workshop",
+  "version": "1.0.0",
+  "description": "Back-end Workshop @ Softuni",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "*.json"
+    ]
+  }
+}
