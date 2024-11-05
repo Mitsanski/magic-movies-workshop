@@ -28,6 +28,10 @@ const create = (movie) => Movie.create(movie);
 // * Getting just one movie based on movie id
 const getOne = (movieId) => Movie.findById(movieId);
 
+const attach = (movieId, castId) => {
+	// TODO: attach cast to movie
+}
+
 export default {
 	getAll,
 	create,

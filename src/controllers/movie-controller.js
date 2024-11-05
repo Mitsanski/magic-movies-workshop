@@ -48,6 +48,15 @@ router.get("/:movieId/attach", async (req, res) => {
 
 	res.render("movies/attach", { movie, casts });
 });
+router.post("/:movieId/attach", (req, res) => {
+	const movieId = req.params.movieId;
+	const cast = req.body.cast;
+
+	console.log(movieId);
+	console.log(cast);
+
+	res.redirect(`/movies/${movieId}/details`);
+});
 
 // * Function that the rating of the movie and converts it into stars string
 function getRatingStars(stars) {
