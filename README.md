@@ -2,4 +2,5 @@
 
 ## Developing Steps Part 1
 1. Initial Architecture and packages
-2. 
+2. Setup express
+3. Setup handlebars
