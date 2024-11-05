@@ -11,4 +11,4 @@
 8. Setup routes
 9. Add About page
 10. Add 404 page
-11. Extract partial template
+11. Extract partial template for movies
