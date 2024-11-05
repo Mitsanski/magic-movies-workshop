@@ -1,6 +1,7 @@
 import Movie from "../models/Movie.js";
 
 // * Getting all movies but if there is a filter it filters them down. That is in case of /search
+// TODO filter in db not in memory
 const getAll = async (filter = {}) => {
 	let movies = await Movie.find();
 	if (filter.search) {
@@ -25,7 +26,7 @@ const getAll = async (filter = {}) => {
 const create = (movie) => Movie.create(movie);
 
 // * Getting just one movie based on movie id
-const getOne = async (movieId) => Movie.findById(movieId);
+const getOne = (movieId) => Movie.findById(movieId);
 
 export default {
 	getAll,

@@ -17,17 +17,24 @@ router.post("/create", async (req, res) => {
 
 	res.redirect("/");
 });
+
+function toArray(documents) {
+	return documents.map((document) => document.toObject());
+}
+
 // * Searches a movie based on a query
 router.get("/search", async (req, res) => {
 	const filter = req.query;
 	const movies = await movieServices.getAll(filter);
+	
 	// * Renders the home page again but in case its a search request it give it isSearch and if true shows the search form
-	res.render("home", { isSearch: true, movies, filter });
+	res.render("home", { isSearch: true, movies: toArray(movies), filter });
 });
 
 // * Gets the id of the movie and shows the details of the moive
 router.get("/:movieId/details", async (req, res) => {
-	const movie = await movieServices.getOne(req.params.movieId);
+	const movieId = req.params.movieId;
+	const movie = await movieServices.getOne(movieId);
 
 	// * Prepare view data
 	movie.ratingView = getRatingStars(Number(movie.rating));
