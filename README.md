@@ -18,4 +18,6 @@
 15. Add Search Page
 
 ## Developing Steps Part 2
-1. Refactor 
+1. Refactor config files. Express, mongoose and handlebars
+2. Add movie model
+3. Convert file based storage to db storage

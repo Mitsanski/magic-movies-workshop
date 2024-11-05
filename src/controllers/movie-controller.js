@@ -17,17 +17,15 @@ router.post("/create", async (req, res) => {
 
 	res.redirect("/");
 });
-
-// * Searches a movie based on a query 
+// * Searches a movie based on a query
 router.get("/search", async (req, res) => {
 	const filter = req.query;
-	const movies = await movieServices.getAll(filter)
+	const movies = await movieServices.getAll(filter);
 	// * Renders the home page again but in case its a search request it give it isSearch and if true shows the search form
 	res.render("home", { isSearch: true, movies, filter });
 });
 
-
-// * Gets the id of the movie and shows the details of the moive 
+// * Gets the id of the movie and shows the details of the moive
 router.get("/:movieId/details", async (req, res) => {
 	const movie = await movieServices.getOne(req.params.movieId);
 
