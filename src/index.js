@@ -1,4 +1,4 @@
-import express from "express";
+import express, { urlencoded } from "express";
 import handlebars from "express-handlebars";
 
 import routes from "./routes.js";
@@ -13,6 +13,9 @@ app.engine(
 		extname: "hbs",
 	})
 );
+
+// * Makes sure when I make a post request and needing the data from a form I get back an object from req.body
+app.use(express.urlencoded({ extended: false }));
 
 // * Setting the server to use hbs for its view engine
 app.set("view engine", "hbs");

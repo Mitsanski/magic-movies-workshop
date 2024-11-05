@@ -12,3 +12,6 @@
 9. Add About page
 10. Add 404 page
 11. Extract partial template for movies
+12. Add service and data layers
+13. Add Create Page 
+14. Add Detials Page
