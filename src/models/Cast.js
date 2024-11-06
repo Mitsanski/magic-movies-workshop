@@ -1,13 +1,12 @@
 import { Schema, model } from "mongoose";
 
 const castSchema = new Schema({
-	name: String,
-	age: Number,
-	born: String,
-	nameInMovie: String,
-	imageUrl: String,
+    name: String,
+    age: Number,
+    born: String,
+    imageUrl: String,
 });
 
-const Cast = model("Cast", castSchema);
+const Cast = model('Cast', castSchema);
 
 export default Cast;

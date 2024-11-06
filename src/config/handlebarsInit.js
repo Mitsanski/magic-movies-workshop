@@ -6,6 +6,15 @@ export default function handlebarsInit(app) {
 		"hbs",
 		handlebars.engine({
 			extname: "hbs",
+			helpers: {
+				// ! When you generate helpers they should be in another file and declared in the engine
+				rating: function (rating) {
+					if (!Number.isInteger(rating)) {
+						return "n\\a";
+					}
+					return "&#x2605".repeat(rating);
+				},
+			},
 		})
 	);
 
