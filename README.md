@@ -36,7 +36,17 @@
 
 
 ## Developing Steps - Workshop 3 Authentication:
- - [ ] Add Model validation 
- - [ ] Bug from previous workshop
+ - [x] Bug from previous workshop
+ - [ ] Add Register page
+    - [ ] Add user model
+    - [ ] Add Auth controller
+    - [ ] Add auth service
+ - [ ] Add Login page
+
+BONUS: 
+ - [ ] Automatic login for registred users
  - [ ] Select dropdown with repopulated value
- - [ ]
+
+
+## Next time 
+ - [ ] Add Model validation 
