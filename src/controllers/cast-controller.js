@@ -2,11 +2,6 @@ import { Router } from "express";
 import castService from "../services/castService.js";
 
 const router = Router();
-
-router.get('/create', (req, res) => {
-    res.render('cast/create');
-});
-
 router.post('/create', async (req, res) => {
     const cast = req.body;
 
@@ -14,5 +9,10 @@ router.post('/create', async (req, res) => {
 
     res.redirect('/');
 });
+
+router.get('/create', (req, res) => {
+    res.render('cast/create');
+});
+
 
 export default router;

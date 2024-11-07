@@ -30,9 +30,13 @@
  - [x] Rating
  - [x] Fix filtering for movies
  - [x] Filter casts based on add ones
- - [ ] Add character name
+ - [x] Add character name
  - [ ] Atlas
+ - [ ] Env
 
 
- Next time:
- - [x] Add Model validation
+## Developing Steps - Workshop 3 Authentication:
+ - [ ] Add Model validation 
+ - [ ] Bug from previous workshop
+ - [ ] Select dropdown with repopulated value
+ - [ ]

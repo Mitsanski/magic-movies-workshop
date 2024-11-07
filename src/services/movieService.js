@@ -4,18 +4,28 @@ import Movie from '../models/Movie.js';
 const getAll = (filter = {}) => {
     let moviesQuery = Movie.find();
 
+
     if (filter.search) {
+        // ! mongodb way
         moviesQuery.find({ title: { $regex: filter.search, $options: 'i' } });
+
+        // ! Mongoose way 
         // moviesQuery.regex('title', new RegExp(filter.search, 'i'))
     }
 
     if (filter.genre) {
+        // ! mongodb way
         moviesQuery.find({ genre: filter.genre.toLowerCase() });
+
+        // ! Mongoose way 
         // moviesQuery.where('genre').equals(filter.genre.toLowerCase())
     }
 
     if (filter.year) {
+        // ! mongodb way
         moviesQuery.find({ year: filter.year });
+        
+        // ! Mongoose way 
         // moviesQuery.where('year').equals(filter.year);
     }
 
