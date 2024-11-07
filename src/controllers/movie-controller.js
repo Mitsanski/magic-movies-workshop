@@ -11,7 +11,7 @@ router.get("/create", (req, res) => {
 });
 
 router.post("/create", async (req, res) => {
-	const movieData = req.body; 
+	const movieData = req.body;
 
 	await movieService.create(movieData);
 
@@ -45,7 +45,7 @@ router.post("/:movieId/attach", async (req, res) => {
 	const character = req.body.character;
 
 	await movieService.attach(movieId, castId, character);
-
+	res.redirect
 	res.redirect(`/movies/${movieId}/details`);
 });
 

@@ -42,6 +42,7 @@
     - [ ] Add Auth controller
     - [ ] Add auth service
  - [ ] Add Login page
+ - [ ] Add dynamic navigation
 
 BONUS: 
  - [ ] Automatic login for registred users
