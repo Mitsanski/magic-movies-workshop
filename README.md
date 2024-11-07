@@ -1,9 +1,10 @@
 # Back-end Workshop @ Softuni Sept 2024
 
 ## Developing Steps Part 1
+
 1. Initial Architecture and packages
 2. Setup express
-3. Setup handlebars and views 
+3. Setup handlebars and views
 4. Add resources
 5. Setup static route
 6. Render home page
@@ -13,11 +14,12 @@
 10. Add 404 page
 11. Extract partial template for movies
 12. Add service and data layers
-13. Add Create Page 
+13. Add Create Page
 14. Add Detials Page
 15. Add Search Page
 
 ## Developing Steps Part 2
+
 1. Refactor config files. Express, mongoose and handlebars
 2. Add movie model
 3. Convert file based storage to db storage
@@ -27,29 +29,35 @@
 7. Show cast in details page
 
 ## Bonus:
- - [x] Rating
- - [x] Fix filtering for movies
- - [x] Filter casts based on add ones
- - [x] Add character name
- - [ ] Atlas
- - [ ] Env
 
+- [x] Rating
+- [x] Fix filtering for movies
+- [x] Filter casts based on add ones
+- [x] Add character name
+- [x] Atlas
+- [x] Env
 
 ## Developing Steps - Workshop 3 Authentication:
- - [x] Bug from previous workshop
- - [x] Add Register page
-    - [x] Add user model
-    - [x] Add Auth controller
-    - [x] Add auth service
-    - [ ] Hash password before save
- - [ ] Add Login page
- - [ ] Add dynamic navigation
 
-BONUS: 
- - [ ] Automatic login for registred users
- - [ ] Select dropdown with repopulated value
+- [x] Bug from previous workshop
+- [x] Add Register page
+  - [x] Add user model
+  - [x] Add Auth controller
+  - [x] Add auth service
+  - [x] Hash password before save
+- [ ] Add Login page
+  - [x] Validate hashed password `npm i bcrypt`
+  - [x] Generate jwt token `npm i jsonwebtoken`
+  - [ ] Add token to cookie `npm i cookie-parser`
+- [ ] Add dynamic navigation
 
+BONUS:
 
-## Next time 
- - [ ] Validate rePassword
- - [ ] Add Model validation 
+- [ ] Make jwt library async
+- [ ] Automatic login for registred users
+- [ ] Select dropdown with repopulated value
+
+## Next time
+
+- [ ] Validate rePassword
+- [ ] Add Model validation
