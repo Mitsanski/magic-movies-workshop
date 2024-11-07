@@ -1,12 +1,13 @@
 import { connect } from "mongoose";
 
-const dbUrl = "mongodb://localhost:27017/magic-movies";
 export default async function mongooseInit() {
-	try {
-		// ! This is top level await
-		await connect(dbUrl);
-		console.log("Connected to database");
-	} catch (err) {
-		throw new Error(err.message);
-	}
+    try {
+        const url = 'mongodb://localhost:27017';
+
+        await connect(url, { dbName: 'magic-movies' });
+
+        console.log('Successfully connected to DB!');
+    } catch (err) {
+        console.log('Cannot connect to DB!' + err.message);
+    }
 }
