@@ -59,6 +59,7 @@ Bonus:
 - [x] Delete movie
 - [] Edit movie
 - [] Add dynamic navigation
+- [] Logout
 
 ## BONUS:
 

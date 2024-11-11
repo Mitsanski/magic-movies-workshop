@@ -11,13 +11,20 @@ export const authMiddleware = async (req, res, next) => {
         const decodedToken = jwt.verify(token, process.env.JWT_SECRET);
         // TODO: Add userdata to request
 
-        req.user = {
+        const user = {
             _id: decodedToken._id,
             email: decodedToken.email,
         }
+
+        req.user = user;
+        res.locals = {
+            userId: user.id,
+            email: user.email,
+            isAuthenticated: true
+        };
+
         return next();
     } catch (err) {
-        console.log(err)
         res.clearCookie('auth');
 
         res.redirect('/auth/login');
