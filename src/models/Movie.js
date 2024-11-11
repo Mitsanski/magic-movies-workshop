@@ -29,7 +29,7 @@ const movieSchema = new Schema({
     description: {
         type: String,
         required: true,
-        maxLength: 100,
+        maxLength: 400,
     },
     imageUrl: String,
     casts: [{
@@ -38,7 +38,11 @@ const movieSchema = new Schema({
             type: Types.ObjectId,
             ref: 'Cast'
         },
-    }]
+    }],
+    owner: {
+        type: Schema.Types.ObjectId,
+        ref: 'User'
+    }
 });
 
 const Movie = model('Movie', movieSchema);

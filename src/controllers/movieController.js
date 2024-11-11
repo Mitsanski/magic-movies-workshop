@@ -1,4 +1,4 @@
-import { Router } from "express";
+import {Router} from "express";
 
 import movieService from "../services/movieService.js";
 import castService from "../services/castService.js";
@@ -12,8 +12,9 @@ router.get('/create', (req, res) => {
 
 router.post('/create', async (req, res) => {
     const movieData = req.body;
+    const ownerId = req.user?._id;
 
-    await movieService.create(movieData);
+    await movieService.create(movieData, ownerId);
 
     res.redirect('/');
 });
@@ -22,21 +23,23 @@ router.get('/search', async (req, res) => {
     const filter = req.query;
     const movies = await movieService.getAll(filter).lean();
 
-    res.render('home', { isSearch: true, movies, filter });
+    res.render('home', {isSearch: true, movies, filter});
 });
 
 router.get('/:movieId/details', async (req, res) => {
     const movieId = req.params.movieId;
     const movie = await movieService.getOne(movieId).lean();
+    const isOwner = req.user?._id === movie.owner?.toString();
 
-    res.render('movies/details', { movie });
+
+    res.render('movies/details', {movie, isOwner});
 });
 
 router.get('/:movieId/attach', async (req, res) => {
     const movie = await movieService.getOne(req.params.movieId).lean();
     const casts = await castService.getAllWithout(movie.casts);
 
-    res.render('movies/attach', { movie, casts });
+    res.render('movies/attach', {movie, casts});
 });
 
 router.post('/:movieId/attach', async (req, res) => {
@@ -49,9 +52,12 @@ router.post('/:movieId/attach', async (req, res) => {
     res.redirect(`/movies/${movieId}/details`);
 });
 
-// Deprecated
-function toArray(documents) {
-    return documents.map(document => document.toObject());
-}
+router.get('/:movieId/delete', async (req, res) => {
+    const movieId = req.params.movieId;
+
+    await movieService.remove(movieId);
+
+    res.redirect('/')
+})
 
 export default router;

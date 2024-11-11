@@ -52,7 +52,10 @@ Bonus:
     - [x] Validate hashed passwords `npm i bcrypt`
     - [x] Create token `npm i jsonwebtoken`
     - [x] Add token to cookie `npm i cookie-parser`
-- [] Add Authorization
+- [x] Add Authorization
+- [x] Add owner relation to movie
+- [x] Add owner control buttons in details page
+- [x] Show buttons if user is owner
 - [] Add dynamic navigation
 
 ## BONUS:

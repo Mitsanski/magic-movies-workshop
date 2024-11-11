@@ -18,28 +18,34 @@
 
                 <p class="disc">Description: {{movie.description}}</p>
 
-                <a href="/movies/{{movie._id}}/attach" class="details" style="display: inline-block;">Attach</a>
             </div>
+            {{#if isOwner}}
+                <div class="details-btn">
+                    <a id="edit-button">Edit</a>
+                    <a href="/movies/{{movie._id}}/delete" id="delete-button">Delete</a>
+                </div>
+            {{/if}}
         </div>
         <div class="card_right">
             <img src="{{movie.imageUrl}}" alt="{{movie.title}}">
         </div>
 
     </div>
+    <a href="/movies/{{movie._id}}/attach" class="details" style="display: inline-block;">Attach</a>
 
     <div class="main-cast-card">
         {{#each movie.casts}}
-        <div class="cast-card">
-            <div class="card-img">
-                <img src="{{cast.imageUrl}}" alt="{{cast.name}}">
+            <div class="cast-card">
+                <div class="card-img">
+                    <img src="{{cast.imageUrl}}" alt="{{cast.name}}">
+                </div>
+                <div class="cast-info">
+                    <h1>{{cast.name}}</h1>
+                    <h3>Age: {{cast.age}}</h3>
+                    <h3>Born: {{cast.born}}</h3>
+                    <h3>Name in Movie: {{character}}</h3>
+                </div>
             </div>
-            <div class="cast-info">
-                <h1>{{cast.name}}</h1>
-                <h3>Age: {{cast.age}}</h3>
-                <h3>Born: {{cast.born}}</h3>
-                <h3>Name in Movie: {{character}}</h3>
-            </div>
-        </div>
         {{/each}}
     </div>
 </section>
