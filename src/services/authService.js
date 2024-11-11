@@ -2,7 +2,6 @@ import User from "../models/User.js";
 import bcrypt from "bcrypt";
 import jwt from 'jsonwebtoken'
 
-const SECRET = "kjlahsvbdklasjbdkaskjalbsd";
 
 const register = (email, password) => {
     // TODO: Check if user exists
@@ -22,12 +21,13 @@ const login = async (email, password) => {
         throw new Error('Password does not match!');
     }
 
-    // TODO: Generate jwt token
+    // * Generate jwt token
     const payload = {_id: user._id, email}
-    const token = jwt.sign(payload, SECRET, {expiresIn: '2h'})
+    console.log(process.env.JWT_SECRET);
 
-    // TODO: Return JWT token
-    return token;
+    // * Return JWT token
+    return jwt.sign(payload, process.env.JWT_SECRET, {expiresIn: '2h'})
+
 }
 
 export default {

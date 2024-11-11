@@ -44,18 +44,20 @@ Bonus:
 ## Developing steps - Workshop 3 Authentication:
 
 - [x] Add register page
-  - [x] Add user model
-  - [x] Add Auth controller
-  - [x] Add Auth service
-  - [x] Hash password before save
-- [] Add login page
-  - [] Validate hashed passwords
-  - [] Create token
-  - [] Add token to cookie
+    - [x] Add user model
+    - [x] Add Auth controller
+    - [x] Add Auth service
+    - [x] Hash password before save
+- [x] Add login page
+    - [x] Validate hashed passwords `npm i bcrypt`
+    - [x] Create token `npm i jsonwebtoken`
+    - [x] Add token to cookie `npm i cookie-parser`
+- [] Add Authorization
 - [] Add dynamic navigation
 
 ## BONUS:
 
+- [] Make jwt library asynchronous
 - [] Select dropdown with prepopulated value
 - [] Automatic login for registered users
 
