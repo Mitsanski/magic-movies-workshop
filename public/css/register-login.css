@@ -4,7 +4,10 @@
 }
 
 .loginSection {
-    background: #b5838d;
+    background: url(../img/form-background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     margin: auto;
     width: 740px;
     height: 370px auto;
@@ -12,11 +15,15 @@
     right: 50%;
     text-align: center;
     display: flex;
+    color: white;
     box-shadow: 3px 10px 20px 5px rgba(0, 0, 0, .5);
 }
 
-.registerSection {
-    background: #b5838d;
+.signupSection {
+    background: url(../img/form-background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     margin: auto;
     width: 740px;
     height: 600px auto;
@@ -24,6 +31,7 @@
     left: 35%;
     text-align: center;
     display: flex;
+    color: white;
     box-shadow: 3px 10px 20px 5px rgba(0, 0, 0, .5);
 }
 
@@ -34,21 +42,8 @@
     border-right: 5px solid black;
 }
 
-.info-register {
-    width: 250px;
-    background: #6D6875;
-    padding: 55px 5px;
-    border-right: 5px solid black;
-}
-
-.info-register>h2 {
-    padding-top: 30%;
-    font-weight: bold;
-    font-size: 23px;
-}
-
-.info > h2 {
-    padding-top: 20%;
+.info>h2 {
+    padding-top: 12em;
     font-weight: bold;
     font-size: 23px;
 }
@@ -61,23 +56,25 @@
 .loginForm {
     width: 580px;
     padding: 30px 0;
+    background: rgba(20, 40, 40, .8);
     transition: .2s;
 }
 
-.registerForm {
+.signupForm {
     width: 540px;
     padding: 30px 0;
+    background: rgba(20, 40, 40, .8);
     transition: .2s;
 }
 
-.registerForm>h2 {
-    font-weight: bolder;
+.signupForm>h2 {
+    font-weight: 350;
     font-size: 27px;
     margin-bottom: 0.8em;
 }
 
 .loginForm>h2 {
-    font-weight: bolder;
+    font-weight: 350;
     font-size: 27px;
     margin-bottom: 0.8em;
 }
@@ -104,7 +101,7 @@
 #join-btn,
 #login-btn {
     border: 1px solid rgba(10, 180, 180, 1);
-    background: #6d6875;
+    background: rgba(20, 20, 20, .6);
     font-size: 18px;
     color: white;
     margin-top: 20px;
@@ -128,7 +125,6 @@
     outline: none;
     box-sizing: border-box;
     font-size: 17px;
-    font-weight: bold;
 }
 
 .noBullet label {

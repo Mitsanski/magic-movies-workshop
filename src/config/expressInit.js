@@ -1,11 +1,6 @@
-import express from "express";
-
-import cookieParser from "cookie-parser";
-import { authMiddleware } from "../middlewares/authMiddleware.js";
+import express from 'express';
 
 export default function expressInit(app) {
-	app.use(express.urlencoded({ extended: false }));
-	app.use(express.static("public"));
-	app.use(cookieParser());
-	app.use(authMiddleware)
-}
+    app.use(express.urlencoded({ extended: false }));
+    app.use(express.static('public'));
+};
