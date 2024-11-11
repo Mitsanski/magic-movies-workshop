@@ -57,9 +57,9 @@ Bonus:
 - [x] Add owner control buttons in details page
 - [x] Show buttons if user is owner
 - [x] Delete movie
-- [] Edit movie
-- [] Add dynamic navigation
-- [] Logout
+- [x] Edit movie
+- [x] Add dynamic navigation
+- [x] Logout
 
 ## BONUS:
 
