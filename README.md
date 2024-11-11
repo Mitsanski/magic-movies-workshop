@@ -60,12 +60,13 @@ Bonus:
 - [x] Edit movie
 - [x] Add dynamic navigation
 - [x] Logout
-- [] Add route guard
+- [x] Add route guard
+- [x] Show email when user is logged in 
 
 ## BONUS:
 
-- [] Automatic login for registered users
-- [] Make jwt library asynchronous
+- [x] Automatic login for registered users
+- [x] Make jwt library asynchronous
 - [] Select dropdown with prepopulated value
 
 ## Next Time
