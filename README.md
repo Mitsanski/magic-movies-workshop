@@ -56,13 +56,15 @@ Bonus:
 - [x] Add owner relation to movie
 - [x] Add owner control buttons in details page
 - [x] Show buttons if user is owner
+- [x] Delete movie
+- [] Edit movie
 - [] Add dynamic navigation
 
 ## BONUS:
 
+- [] Automatic login for registered users
 - [] Make jwt library asynchronous
 - [] Select dropdown with prepopulated value
-- [] Automatic login for registered users
 
 ## Next Time
 

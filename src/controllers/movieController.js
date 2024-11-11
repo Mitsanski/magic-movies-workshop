@@ -58,6 +58,13 @@ router.get('/:movieId/delete', async (req, res) => {
     await movieService.remove(movieId);
 
     res.redirect('/')
+});
+
+router.get('/:movieId/edit', async (req, res) => {
+    const movie = await movieService.getOne(req.params.movieId);
+    console.log(movie.title)
+
+    res.render('movies/edit', {movie})
 })
 
 export default router;
