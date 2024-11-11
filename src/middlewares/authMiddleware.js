@@ -17,6 +17,7 @@ export const authMiddleware = async (req, res, next) => {
         }
 
         req.user = user;
+        req.isAuthenticated = true;
         res.locals = {
             userId: user.id,
             email: user.email,
@@ -31,4 +32,10 @@ export const authMiddleware = async (req, res, next) => {
     }
 
     // TODO: Add user data to request
+}
+
+export const isAuth = (req, res, next) => {
+    if (!req.isAuthenticated){
+        return res.status(401).redirect('/auth/login');
+    }
 }

@@ -60,6 +60,7 @@ Bonus:
 - [x] Edit movie
 - [x] Add dynamic navigation
 - [x] Logout
+- [] Add route guard
 
 ## BONUS:
 
