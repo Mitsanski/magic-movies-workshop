@@ -1,51 +1,65 @@
 # movie-magic-sept-2024
+
 JS Back-End Course Workshop @SoftUni
 
 ## Start project
+
 `npm run dev` - for developing
 
 ## Developing Steps - Workshop 1
- 1. Initial Project Architecture
- 2. Setup express
- 3. Setup handlebars
- 4. Add resources
- 5. Setup static route
- 6. Render home page
- 7. Add routes and controllers
- 8. Extract partial template
- 9. Add service and data layers
- 10. Add Create page
- 11. Add Details page
- 12. Add Search page
+
+1. Initial Project Architecture
+2. Setup express
+3. Setup handlebars
+4. Add resources
+5. Setup static route
+6. Render home page
+7. Add routes and controllers
+8. Extract partial template
+9. Add service and data layers
+10. Add Create page
+11. Add Details page
+12. Add Search page
 
 ## Developing Steps - Workshop 2
- 1. Extract init files
- 2. Setup mongoose
- 3. Add Movie model
- 4. Convert file based storage to db storage
- 5. Add Cast model
- 6. Add create cast page
- 7. Add attach cast page
- 8. Show cast in details page
-   
+
+1. Extract init files
+2. Setup mongoose
+3. Add Movie model
+4. Convert file based storage to db storage
+5. Add Cast model
+6. Add create cast page
+7. Add attach cast page
+8. Show cast in details page
+
 Bonus:
- - [x] Rating helper
- - [x] Fix filtering for movies
- - [x] Filter cast based on added ones
- - [x] Add character name
- - [x] Atlas
- - [x] env variable file
+
+- [x] Rating helper
+- [x] Fix filtering for movies
+- [x] Filter cast based on added ones
+- [x] Add character name
+- [x] Atlas
+- [x] env variable file
 
 ## Developing steps - Workshop 3 Authentication:
- - [] Add register page
-   - [] Add user model
-   - [] Add Auth controller
-   - [] Add Auth service
- - [] Add login page
+
+- [x] Add register page
+  - [x] Add user model
+  - [x] Add Auth controller
+  - [x] Add Auth service
+  - [x] Hash password before save
+- [] Add login page
+  - [] Validate hashed passwords
+  - [] Create token
+  - [] Add token to cookie
 - [] Add dynamic navigation
 
 ## BONUS:
- - [] Select dropdown with prepopulated value
- - [] Automatic login for registered users  
-## Next Time 
- - [ ] Add model validations
+
+- [] Select dropdown with prepopulated value
+- [] Automatic login for registered users
+
+## Next Time
+
+- [] Add model validations
+- [] Validate repeated password
