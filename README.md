@@ -36,15 +36,13 @@ Bonus:
  - [x] Atlas
  - [x] env variable file
 
-
-
 ## Developing steps - Workshop 3 Authentication:
  - [] Add register page
    - [] Add user model
    - [] Add Auth controller
    - [] Add Auth service
  - [] Add login page
- - [] 
+- [] Add dynamic navigation
 
 ## BONUS:
  - [] Select dropdown with prepopulated value
