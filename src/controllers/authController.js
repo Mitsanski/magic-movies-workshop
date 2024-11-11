@@ -3,10 +3,12 @@ import authService from '../services/authService.js'
 
 const router = Router();
 
+// ! Register get
 router.get('/register', (req, res) => {
     res.render('auth/register');
 });
 
+// ! Register post
 router.post('/register', async (req, res) => {
     const {email, password, rePassword} = req.body;
 
