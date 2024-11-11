@@ -37,7 +37,7 @@ jspm_packages/
 .DS_Store
 
 # Editor directories and files
-.idea
+.idea/
 .vscode/
 *.suo
 *.ntvs*
@@ -55,3 +55,4 @@ build/
 # TypeScript cache (if using TypeScript)
 *.tsbuildinfo
 
+/.idea/

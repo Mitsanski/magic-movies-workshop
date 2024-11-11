@@ -36,5 +36,8 @@ Bonus:
  - [x] Atlas
  - [x] env variable file
 
-Next time:
+
+
+## Developing steps - Workshop 3 Authentication:
+ - [ ] Select dropdown with prepopulated value
  - [ ] Add model validations
