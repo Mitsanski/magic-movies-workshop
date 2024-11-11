@@ -39,5 +39,15 @@ Bonus:
 
 
 ## Developing steps - Workshop 3 Authentication:
- - [ ] Select dropdown with prepopulated value
+ - [] Add register page
+   - [] Add user model
+   - [] Add Auth controller
+   - [] Add Auth service
+ - [] Add login page
+ - [] 
+
+## BONUS:
+ - [] Select dropdown with prepopulated value
+ - [] Automatic login for registered users  
+## Next Time 
  - [ ] Add model validations
