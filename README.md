@@ -61,7 +61,7 @@ Bonus:
 - [x] Add dynamic navigation
 - [x] Logout
 - [x] Add route guard
-- [x] Show email when user is logged in 
+- [x] Show email when user is logged in
 
 ## BONUS:
 

@@ -3,9 +3,14 @@ import bcrypt from "bcrypt";
 import jwt from '../lib/jwt.js'
 
 
-const register = (email, password) => {
+const register = async (email, password, rePassword) => {
+    const userCount = await User.countDocuments({email});
+
+    if (userCount > 0){
+        throw new Error("User already exists");
+    }
     // TODO: Check if user exists
-    return User.create({email, password});
+    return User.create({email, password, rePassword});
 }
 
 const login = async (email, password) => {
