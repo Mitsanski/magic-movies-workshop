@@ -15,3 +15,5 @@ JS Back-End Course Workshop @Softuni
     5. Setup static route
     6. Render home page
     7. Setup routes and controller
+    8. Extract partial template
+    9. 
