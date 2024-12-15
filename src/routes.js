@@ -1,7 +1,7 @@
 import { Router } from "express";
 
-import homeController from "./controllers/home-controller.js";
-import movieController from "./controllers/movie-controller.js";
+import homeController from "./controllers/homeController.js";
+import movieController from "./controllers/movieController.js";
 
 const router = Router();
 
