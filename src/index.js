@@ -1,4 +1,4 @@
-import express from "express";
+import express, { urlencoded } from "express";
 import handlebars from "express-handlebars";
 import routes from "./routes.js";
 
@@ -16,6 +16,7 @@ app.set("views", "./src/views");
 
 app.use(express.static("public"));
 
-app.use(routes)
+app.use(routes);
+app.use(express.urlencoded({ extended: false }));
 
 app.listen(5000, () => console.log(`Server is listening on http://localhost:5000...`));
