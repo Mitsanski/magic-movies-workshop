@@ -1,22 +1,22 @@
 import express from "express";
 import handlebars from "express-handlebars";
+import homeController from "./controllers/home-controller.js";
 
 const app = express();
 
+// * View engine setup
 app.engine(
 	"hbs",
 	handlebars.engine({
 		extname: "hbs",
 	})
 );
-
 app.set("view engine", "hbs");
 app.set("views", "./src/views");
 
 app.use(express.static("public"));
 
-app.listen(5000, () => console.log(`Server is listening on http://localhost:5000...`));
+// * Router Controllers
+app.use(homeController);
 
-app.get("/", (req, res) => {
-	res.render("home");
-});
+app.listen(5000, () => console.log(`Server is listening on http://localhost:5000...`));
