@@ -13,8 +13,10 @@ app.engine(
 app.set("view engine", "hbs");
 app.set("views", "./src/views");
 
+app.use(express.static("public"));
+
 app.listen(5000, () => console.log(`Server is listening on http://localhost:5000...`));
 
 app.get("/", (req, res) => {
-	res.render("index");
+	res.render("home");
 });

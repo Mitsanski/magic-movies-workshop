@@ -9,3 +9,4 @@ JS Back-End Course Workshop @Softuni
     2. Setup Express
     3. Setup View engine
     4. Add resources 
+    5. Setup static route
