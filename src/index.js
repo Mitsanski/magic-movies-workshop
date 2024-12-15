@@ -16,5 +16,5 @@ app.set("views", "./src/views");
 app.listen(5000, () => console.log(`Server is listening on http://localhost:5000...`));
 
 app.get("/", (req, res) => {
-	res.render("index", { layout: false });
+	res.render("index");
 });
