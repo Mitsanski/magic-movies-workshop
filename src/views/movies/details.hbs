@@ -13,7 +13,7 @@
 					<div class="second-info">
 						<p class="card-year">Year: {{movie.year}}</p>
 						<p class="card-ranking">Rating:
-							<span id="stars">{{{ratingString}}}</span></p>
+							<span id="stars">{{{rating movie.rating}}}</span></p>
 					</div>
 
 				</div>
@@ -25,6 +25,26 @@
 		<div class="card_right">
 			<img src="{{movie.imageUrl}}" alt="{{movie.title}}" />
 		</div>
+	</div>
+
+	<div class="main-cast-card">
+		{{#each casts}}
+			<div class="cast-card">
+				<div class="card-img">
+					<img src="{{imageUrl}}" alt="{{name}}" />
+				</div>
+				<div class="cast-info">
+					<h1>{{name}}</h1>
+					<h3>Age: {{age}}</h3>
+					<h3>Born: {{born}}</h3>
+					<h3>Name in Movie: N/A</h3>
+				</div>
+			</div>
+		{{else}}
+			<div class="no-cast">
+				<p>There are no casts added yet...</p>
+			</div>
+		{{/each}}
 	</div>
 
 </section>

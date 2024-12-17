@@ -1,30 +1,34 @@
 import Movie from "../models/Movie.js";
 
 const getAll = async (filter = {}) => {
-	let query = await Movie.find().lean();
+	let moviesQuery = Movie.find().lean();
 
 	if (filter.title) {
-		query = query.filter((x) =>
-			x.title.toLowerCase().includes(filter.title.toLowerCase())
-		);
+		moviesQuery.find({ title: { $regex: filter.title, $options: "i" } });
 	}
 
 	if (filter.genre) {
-		query = query.filter((x) => x.genre.toLowerCase() == filter.genre.toLowerCase());
+		moviesQuery.find({ genre: filter.genre.toLowerCase() });
 	}
 
 	if (filter.year) {
-		query = query.filter((x) => x.year == filter.year);
+		moviesQuery.find({ year: filter.year });
+		// moviesQuery.where("year").equals(filter.year);
 	}
 
-	return query;
+	return moviesQuery;
 };
-const getSingleMovie = (id) => Movie.findById(id);
+const getSingleMovie = (id) => Movie.findById(id).populate("casts");
 
 const create = (movie) => Movie.create(movie);
+
+const attach = (movieId, castId) => {
+	return Movie.findByIdAndUpdate(movieId, { $push: { casts: castId } });
+};
 
 export default {
 	getAll,
 	create,
 	getSingleMovie,
+	attach,
 };

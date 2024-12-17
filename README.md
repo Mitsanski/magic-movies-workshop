@@ -29,4 +29,14 @@ JS Back-End Course Workshop @Softuni
     4. Convert file based storeage to db based storage
     5. Add Cast model
     6. Add create cast page
-    7. 
+    7. Add attach cast page
+    8. Show cast in details page
+
+## BONUS
+
+    [x] Rating helper
+    [x] Add model validation
+    [] Fix filtering for movies
+    [] Add character name
+    [] Filter cast based on added ones
+    [] Atlas
