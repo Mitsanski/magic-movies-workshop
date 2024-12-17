@@ -1,4 +1,3 @@
-import uniqid from "uniqid";
 import Movie from "../models/Movie.js";
 
 const getAll = async (filter = {}) => {
@@ -21,10 +20,8 @@ const getAll = async (filter = {}) => {
 	return query;
 };
 const getSingleMovie = (id) => Movie.findById(id);
-const create = (movie) => {
-	movie.id = uniqid();
-	return Movie.create(movie);
-};
+
+const create = (movie) => Movie.create(movie);
 
 export default {
 	getAll,

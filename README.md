@@ -25,5 +25,6 @@ JS Back-End Course Workshop @Softuni
 
     1. Extract init files
     2. Setup mongoose
-    3. Add models
-    4. \\
+    3. Add Movie model
+    4. Convert file based storeage to db based storage
+    5. Add Cast model
