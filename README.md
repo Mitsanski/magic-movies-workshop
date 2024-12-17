@@ -28,3 +28,4 @@ JS Back-End Course Workshop @Softuni
     3. Add Movie model
     4. Convert file based storeage to db based storage
     5. Add Cast model
+    6. Add create cast page
