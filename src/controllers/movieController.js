@@ -25,9 +25,10 @@ movieController.get("/:movieId/details", async (req, res) => {
 });
 
 movieController.get('/search', async (req, res) => {
-	const movies = await movieService.getAll(req.query)
+	const searchQuery = req.query
+	const movies = await movieService.getAll(searchQuery)
 
-	res.render("movies/search", {movies})
+	res.render("movies/search", {movies, searchQuery})
 })
 
 function getRatingViewData(rating) {
