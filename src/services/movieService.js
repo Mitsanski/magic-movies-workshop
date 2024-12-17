@@ -1,8 +1,8 @@
 import uniqid from "uniqid";
-import movieData from "../data/movieData.js";
+import Movie from "../models/Movie.js";
 
 const getAll = async (filter = {}) => {
-	let query = await movieData.getAll();
+	let query = await Movie.find().lean();
 
 	if (filter.title) {
 		query = query.filter((x) =>
@@ -20,10 +20,10 @@ const getAll = async (filter = {}) => {
 
 	return query;
 };
-const getSingleMovie = (id) => movieData.getSingleMovie(id);
+const getSingleMovie = (id) => Movie.findById(id);
 const create = (movie) => {
 	movie.id = uniqid();
-	return movieData.create(movie);
+	return Movie.create(movie);
 };
 
 export default {

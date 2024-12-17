@@ -6,7 +6,7 @@ JS Back-End Course Workshop @Softuni
 
 `npm run dev` - for developing
 
-## Developing Steps
+## Developing Steps - Workshop 1
 
     1. Initial Project Architecture `npm init -y`
     2. Setup Express
@@ -20,3 +20,10 @@ JS Back-End Course Workshop @Softuni
     10. Add Create page
     11. Add Details page
     12. Add Search page
+
+## Develiping Steps - Workshop 2
+
+    1. Extract init files
+    2. Setup mongoose
+    3. Add models
+    4. \\
