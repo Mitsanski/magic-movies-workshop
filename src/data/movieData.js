@@ -27,7 +27,15 @@ async function create(movieData) {
 	return saveDb(db);
 }
 
+async function getSingleMovie(movieId) {
+	const db = await getDb();
+	const movie = db.movies.find((x) => x.id === movieId);
+
+	return movie;
+}
+
 export default {
 	getAll,
 	create,
+	getSingleMovie
 };

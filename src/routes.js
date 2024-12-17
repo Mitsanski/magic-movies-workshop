@@ -8,5 +8,8 @@ const router = Router();
 // * Router Controllers
 router.use(homeController);
 router.use("/movies", movieController);
+router.all("*", (req, res) => {
+    res.render("home/404")
+})
 
 export default router;

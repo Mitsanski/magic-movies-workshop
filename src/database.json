@@ -1,32 +1,44 @@
 {
-  "movies": [
-    {
-      "name": "Jungle Cruise",
-      "genre": "Adventure",
-      "description": "Dreaming about saving countless lives and having another adventure, the feisty English feminist and doctor of botany, Dr Lily Houghton, embarks on a peril-laden mission to change the world. Along with her fashionable brother, MacGregor, Dr Houghton enlists the help of the arrogant, wisecracking riverboat skipper, Captain Frank Wolff, to guide them through the serpentine Amazon River in La Quila, his swift wooden boat. Now, as the intrepid trio ventures deeper and deeper into the heart of an impenetrable green maze, searching for something that cannot be found, a centuries-old curse and the ruthless aristocrat, Prince Joachim, threaten to put an end to their ambitious plans.",
-      "imageUrl": "/img/jungle-cruise.jpeg"
-    },
-    {
-      "name": "The Little Mermaid",
-      "genre": "Fantasy",
-      "description": "The youngest of King Triton's daughters, Ariel is a beautiful and spirited young mermaid with a thirst for adventure. Longing to find out more about the world beyond the sea, Ariel visits the surface and falls for the dashing Prince Eric. Following her heart, she makes a deal with the evil sea witch, Ursula, to experience life on land.",
-      "imageUrl": "/img/the-little-mermaid.jpg"
-    },
-    {
-      "name": "Home Alone",
-      "genre": "Comedy",
-      "description": "It is Christmas time and the McCallister family is preparing for a vacation in Paris, France. But the youngest in the family, Kevin (Macaulay Culkin), got into a scuffle with his older brother Buzz (Devin Ratray) and was sent to his room, which is on the third floor of his house. Then, the next morning, while the rest of the family was in a rush to make it to the airport on time, they completely forgot about Kevin, who now has the house all to himself. Being home alone was fun for Kevin, having a pizza all to himself, jumping on his parents' bed, and making a mess. Then, Kevin discovers about two burglars, Harry (Joe Pesci) and Marv (Daniel Stern), about to rob his house on Christmas Eve. Kevin acts quickly by wiring his own house with makeshift booby traps to stop the burglars and to bring them to justice.",
-      "imageUrl": "/img/home-alone.jpeg"
-    },
-    {
-      "title": "Grand Turismo",
-      "genre": "Sports",
-      "director": "Neill Blomkamp",
-      "year": "2023",
-      "imageUrl": "https://m.media-amazon.com/images/M/MV5BMjA0N2YyNmYtZDk4Ny00ODE2LThmZWQtNGJiMDk0YzhiNzE5XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-      "rating": "4",
-      "description": "Based on the unbelievable, inspiring true story of a team of underdogs - a struggling, working-class gamer, a failed former race car driver, and an idealistic motorsport exec - who risk it all to take on the most elite sport in the world.",
-      "id": "12eoqj1srtm4psa4cd"
-    }
-  ]
+	"movies": [
+		{
+			"id": "1",
+			"title": "Jungle Cruise",
+			"genre": "Adventure",
+			"director": "Jaume Collet-Serra",
+			"year": 2021,
+			"imageUrl": "https://m.media-amazon.com/images/M/MV5BMWU5ZTBkMjQtMzg2Yi00ZmJlLTk4YWEtYTc0ZjU1YzE1NGNkXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+			"rating": 4,
+			"description": "Dreaming about saving countless lives and having another adventure, the feisty English feminist and doctor of botany, Dr Lily Houghton, embarks on a peril-laden mission to change the world. Along with her fashionable brother, MacGregor, Dr Houghton enlists the help of the arrogant, wisecracking riverboat skipper, Captain Frank Wolff, to guide them through the serpentine Amazon River in La Quila, his swift wooden boat. Now, as the intrepid trio ventures deeper and deeper into the heart of an impenetrable green maze, searching for something that cannot be found, a centuries-old curse and the ruthless aristocrat, Prince Joachim, threaten to put an end to their ambitious plans."
+		},
+		{
+			"id": "2",
+			"title": "The Little Mermaid",
+			"genre": "Fantasy",
+			"director": "Rob Marshall",
+			"year": 2023,
+			"imageUrl": "https://i5.walmartimages.com/seo/The-Little-Mermaid-2023-DVD_9a2e5442-4d2d-4011-9313-b44c8e6ec6bb.eb7b1f824350a8512668d9ac978bcba6.jpeg",
+			"rating": 2,
+			"description": "The youngest of King Triton's daughters, Ariel is a beautiful and spirited young mermaid with a thirst for adventure. Longing to find out more about the world beyond the sea, Ariel visits the surface and falls for the dashing Prince Eric. Following her heart, she makes a deal with the evil sea witch, Ursula, to experience life on land."
+		},
+		{
+			"id": "3",
+			"title": "Home Alone",
+			"genre": "Comedy",
+			"director": "Chris Columbus",
+			"year": 1990,
+			"imageUrl": "https://m.media-amazon.com/images/M/MV5BNzNmNmQ2ZDEtMTc1MS00NjNiLThlMGUtZmQxNTg1Nzg5NWMzXkEyXkFqcGc@._V1_.jpg",
+			"rating": 5,
+			"description": "It is Christmas time and the McCallister family is preparing for a vacation in Paris, France. But the youngest in the family, Kevin (Macaulay Culkin), got into a scuffle with his older brother Buzz (Devin Ratray) and was sent to his room, which is on the third floor of his house. Then, the next morning, while the rest of the family was in a rush to make it to the airport on time, they completely forgot about Kevin, who now has the house all to himself. Being home alone was fun for Kevin, having a pizza all to himself, jumping on his parents' bed, and making a mess. Then, Kevin discovers about two burglars, Harry (Joe Pesci) and Marv (Daniel Stern), about to rob his house on Christmas Eve. Kevin acts quickly by wiring his own house with makeshift booby traps to stop the burglars and to bring them to justice."
+		},
+		{
+			"id": "12eoqj1srtm4psa4cd",
+			"title": "Grand Turismo",
+			"genre": "Sports",
+			"director": "Neill Blomkamp",
+			"year": 2023,
+			"imageUrl": "https://m.media-amazon.com/images/M/MV5BMjA0N2YyNmYtZDk4Ny00ODE2LThmZWQtNGJiMDk0YzhiNzE5XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+			"rating": 4,
+			"description": "Based on the unbelievable, inspiring true story of a team of underdogs - a struggling, working-class gamer, a failed former race car driver, and an idealistic motorsport exec - who risk it all to take on the most elite sport in the world."
+		}
+	]
 }
