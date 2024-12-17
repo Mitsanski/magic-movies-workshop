@@ -29,3 +29,4 @@ JS Back-End Course Workshop @Softuni
     4. Convert file based storeage to db based storage
     5. Add Cast model
     6. Add create cast page
+    7. 
